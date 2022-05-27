@@ -1,8 +1,15 @@
-import React from 'react'
+import React from 'react';
+import { Navbar, Container } from 'react-bootstrap';
 
 function Header() {
   return (
-    <div>Header</div>
+    <Navbar bg="dark" variant="dark">
+    <Container>
+      <Navbar.Brand href="#home">
+      React Bootstrap
+      </Navbar.Brand>
+    </Container>
+  </Navbar>
   )
 }
 

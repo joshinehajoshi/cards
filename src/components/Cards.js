@@ -1,8 +1,57 @@
-import React from 'react'
+import React, {useState} from 'react';
+import '../App.css';
+import { Card, Button, Form, Col, Row } from 'react-bootstrap';
+import DateComp from './DateComp';
 
-function Cards() {
+
+function Cards({deleteCard, setDeleteCard, cardNumber, setCardNumber}) {
+  console.log(cardNumber)
+
+  const deleteCardHandler = () => {
+    setDeleteCard(false)
+    console.log(deleteCard)
+  }
   return (
-    <div>Cards</div>
+    <Card style={{ width: '36rem' }}>
+  <Card.Body>
+  <Form>
+  <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
+    <Form.Label column sm="4">
+      Card Name
+    </Form.Label>
+    <Col sm="8">
+      <Form.Control plaintext defaultValue={cardNumber}  />
+    </Col>
+  </Form.Group>
+
+  <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
+    <Form.Label column sm="4">
+      Project Budget
+    </Form.Label>
+    <Col sm="8">
+      <Form.Control plaintext defaultValue={cardNumber}  />
+    </Col>
+  </Form.Group>
+
+  <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
+    <Form.Label column sm="4">
+      Project End Date
+    </Form.Label>
+    <Col sm="8">
+      <DateComp />
+    </Col>
+  </Form.Group>
+
+  <hr />
+  <div className="card-footer">
+    <h5>Edit Card</h5>
+    <h5>Copy Card</h5>
+    <h5 onClick={deleteCardHandler}>Delete Card</h5>
+  </div>
+
+</Form>
+  </Card.Body>
+</Card>
   )
 }
 
