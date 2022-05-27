@@ -7,7 +7,7 @@ function DateComp() {
     <Stack component="form" spacing={3}>
     <TextField
       id="datetime-local"
-      label="Project End Date"
+      className="date-picker"
       type="datetime-local"
       defaultValue="2022-05-24T10:30"
       sx={{ width: 250 }}
