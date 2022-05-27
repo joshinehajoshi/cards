@@ -58,3 +58,12 @@ background-color: #70a3bb;
   text-align: left;
     padding-left: 2rem; 
 }
+
+.card-footer h5 {
+  cursor: pointer;
+}
+
+.card-footer h5:hover {
+  cursor: pointer;
+  color: white;
+}
