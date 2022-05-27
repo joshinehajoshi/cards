@@ -1,13 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
 import Cards from './components/Cards';
+import { Container } from 'react-bootstrap';
 
 function App() {
   return (
     <div className="App">
     <Header />
-    <Cards />
+    <div className='card-wrapper'>
+    <Container>
+      <Cards />
+    </Container>
+    </div>
     </div>
   );
 }

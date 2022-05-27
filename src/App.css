@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #70a3bb;
+  border-top: none;
+}
+
+.card {
+border-radius: 10px;
+background-color: #70a3bb;
+}
+
+.card-wrapper {
+  margin-top: 5rem;
+}
+
+.col-form.label {
+  text-align: left;
+    padding-left: 2rem; 
+}
