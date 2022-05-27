@@ -4,7 +4,7 @@ import { Card, Button, Form, Col, Row } from 'react-bootstrap';
 import DateComp from './DateComp';
 
 
-function Cards({deleteCard, setDeleteCard, cardNumber, setCardNumber}) {
+function Cards({deleteCard, setDeleteCard, cardNumber, setCardNumber, id, budget}) {
   console.log(cardNumber)
 
   const deleteCardHandler = () => {
@@ -20,7 +20,7 @@ function Cards({deleteCard, setDeleteCard, cardNumber, setCardNumber}) {
       Card Name
     </Form.Label>
     <Col sm="8">
-      <Form.Control plaintext defaultValue={cardNumber}  />
+      <Form.Control plaintext defaultValue={`Project ${id}`} />
     </Col>
   </Form.Group>
 
@@ -29,7 +29,7 @@ function Cards({deleteCard, setDeleteCard, cardNumber, setCardNumber}) {
       Project Budget
     </Form.Label>
     <Col sm="8">
-      <Form.Control plaintext defaultValue={cardNumber}  />
+      <Form.Control plaintext defaultValue={budget}  />
     </Col>
   </Form.Group>
 
