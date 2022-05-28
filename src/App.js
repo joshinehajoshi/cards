@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import Header from './components/Header';
 import Cards from './components/Cards';
@@ -10,6 +10,22 @@ function App() {
 
   const [cardNumber, setCardNUmber] = useState(1);
   const [deleteCard, setDeleteCard] = useState(false);
+
+  useEffect(() => {
+    // eslint-disable-next-line no-lone-blocks
+    {cardData.map((item) => {
+      return (
+        <Cards
+        deleteCard={deleteCard}
+        setDeleteCard={setDeleteCard}
+        cardNumber={cardNumber}
+        setCardNUmber={setCardNUmber}
+        id={item.id}
+        budget={item.budget}
+        />
+      )
+    })}
+  },[cardData])
 
   return (
     <div className="App">
